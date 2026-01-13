@@ -91,15 +91,15 @@ img, video {
 .nav-logos {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav-logo img {
-    height: 45px;
+    height: 40px;
     width: auto;
 }
 
-.nav-logo .logo-vault {
+.logo-vault {
     filter: brightness(0) invert(1);
 }
 
@@ -926,17 +926,18 @@ img, video {
 .footer-logos {
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-bottom: 20px;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
 }
 
 .footer-brand-logo {
-    max-width: 140px;
+    max-width: 160px;
     height: auto;
 }
 
-.footer-brand-logo.logo-vault {
-    filter: brightness(0) invert(1);
+.footer-brand {
+    text-align: center;
 }
 
 .footer-brand p {
@@ -944,10 +945,14 @@ img, video {
     color: var(--color-text-secondary);
     margin-bottom: 25px;
     line-height: 1.8;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-social {
     display: flex;
+    justify-content: center;
     gap: 12px;
 }
 
