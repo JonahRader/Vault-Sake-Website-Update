@@ -370,6 +370,20 @@ img.logo-vault,
     font-size: 0.9rem;
 }
 
+/* Ensure video covers on all devices */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    -webkit-transform: translate(-50%, -50%);
+}
+
 /* ============================================
    TICKER
    ============================================ */
@@ -1162,6 +1176,10 @@ img.logo-vault,
         width: 240px;
         height: 240px;
     }
+
+    .nav {
+        gap: 40px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -1178,6 +1196,19 @@ img.logo-vault,
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .nav {
+        gap: 30px;
+        padding: 12px 30px;
+    }
+
+    .nav-logo img {
+        height: 35px;
+    }
+
+    .nav-logos {
+        gap: 12px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1187,15 +1218,114 @@ img.logo-vault,
 
     .nav {
         width: calc(100% - 40px);
-        padding: 12px 25px;
+        padding: 12px 20px;
+        gap: 15px;
+    }
+
+    .nav-logos {
+        gap: 10px;
+    }
+
+    .nav-logo img {
+        height: 30px;
     }
 
     .nav-links {
         display: none;
     }
 
+    .nav-cta {
+        padding: 10px 20px;
+        font-size: 0.7rem;
+    }
+
     .nav-toggle {
         display: flex;
+    }
+
+    /* Hero Mobile */
+    .hero-logo {
+        max-width: 280px;
+    }
+
+    .hero-tagline {
+        font-size: 0.85rem;
+        letter-spacing: 4px;
+        margin-bottom: 40px;
+    }
+
+    .hero-badge {
+        bottom: 40px;
+    }
+
+    .spinning-badge {
+        width: 70px;
+        height: 70px;
+    }
+
+    .badge-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .video-controls {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .video-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Ticker Mobile */
+    .ticker {
+        padding: 12px 0;
+    }
+
+    .ticker-item {
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+    }
+
+    /* Story Mobile */
+    .story-content h2 {
+        font-size: 3rem;
+    }
+
+    .story-content p {
+        font-size: 1rem;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+    }
+
+    .story-stats {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .blob-frame {
+        max-width: 400px;
+    }
+
+    /* Menu Mobile */
+    .menu-header h2 {
+        font-size: 3rem;
+    }
+
+    .menu-header p {
+        font-size: 1.5rem;
+    }
+
+    /* Vibe Mobile */
+    .vibe-header h2 {
+        font-size: 3rem;
+    }
+
+    .vibe-header p {
+        font-size: 1.5rem;
     }
 
     .polaroid-item img {
@@ -1212,14 +1342,38 @@ img.logo-vault,
         height: 300px;
     }
 
-    .story-stats {
-        flex-wrap: wrap;
-        gap: 30px;
+    .past-events-header h3 {
+        font-size: 2rem;
     }
 
+    /* Contact Mobile */
+    .contact-info h2 {
+        font-size: 3rem;
+    }
+
+    .contact-item {
+        padding: 15px;
+    }
+
+    .contact-item i {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    /* Footer Mobile */
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .footer-logos {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-brand-logo {
+        max-width: 120px;
     }
 
     .footer-social {
@@ -1233,13 +1387,77 @@ img.logo-vault,
 }
 
 @media (max-width: 480px) {
+    .nav {
+        padding: 10px 15px;
+    }
+
+    .nav-logos {
+        gap: 8px;
+    }
+
+    .nav-logo img {
+        height: 25px;
+    }
+
+    .nav-cta {
+        padding: 8px 16px;
+        font-size: 0.65rem;
+    }
+
     .hero-logo {
-        max-width: 240px;
+        max-width: 200px;
+    }
+
+    .hero-tagline {
+        font-size: 0.75rem;
+        letter-spacing: 3px;
     }
 
     .hero-cta {
-        padding: 15px 35px;
-        font-size: 0.85rem;
+        padding: 15px 30px;
+        font-size: 0.8rem;
+    }
+
+    .spinning-badge {
+        width: 60px;
+        height: 60px;
+    }
+
+    .badge-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .badge-icon i {
+        font-size: 0.8rem;
+    }
+
+    .ticker-item {
+        font-size: 0.75rem;
+        gap: 10px;
+    }
+
+    .ticker-content {
+        gap: 30px;
+    }
+
+    .story-content h2,
+    .menu-header h2,
+    .vibe-header h2,
+    .contact-info h2 {
+        font-size: 2.5rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+    }
+
+    .blob-frame {
+        max-width: 300px;
     }
 
     .polaroid-item img {
@@ -1257,6 +1475,46 @@ img.logo-vault,
     }
 
     .contact-form {
-        padding: 30px;
+        padding: 25px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 15px 18px;
+    }
+
+    .footer-brand-logo {
+        max-width: 100px;
+    }
+
+    .footer-logos {
+        gap: 15px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .nav-logo img {
+        height: 22px;
+    }
+
+    .nav-cta {
+        padding: 6px 12px;
+        font-size: 0.6rem;
+    }
+
+    .hero-logo {
+        max-width: 180px;
+    }
+
+    .story-content h2,
+    .menu-header h2,
+    .vibe-header h2,
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+
+    .footer-brand-logo {
+        max-width: 80px;
     }
 }

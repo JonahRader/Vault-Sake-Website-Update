@@ -6,6 +6,19 @@ AOS.init({
     offset: 50
 });
 
+// Ensure video plays on mobile (iOS fix)
+const heroVideo = document.getElementById('heroVideo');
+if (heroVideo) {
+    // Try to play video on load
+    heroVideo.play().catch(() => {
+        // If autoplay fails, play on first user interaction
+        document.addEventListener('touchstart', function playVideo() {
+            heroVideo.play();
+            document.removeEventListener('touchstart', playVideo);
+        }, { once: true });
+    });
+}
+
 // Navigation scroll effect
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -18,7 +31,6 @@ document.getElementById('navToggle').addEventListener('click', () => {
 });
 
 // Video toggle
-const heroVideo = document.getElementById('heroVideo');
 const videoIcon = document.getElementById('videoIcon');
 document.getElementById('videoToggle').addEventListener('click', () => {
     if (heroVideo.paused) {
