@@ -10,15 +10,24 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Logos/sake_logo logo (transparent background).png">
 
-    <!-- Google Fonts -->
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="Logos/vault_logo_blk.png" as="image">
+    <link rel="preload" href="Logos/sake_logo logo (transparent background).png" as="image">
+    <link rel="preload" href="css/styles.css" as="style">
+
+    <!-- Google Fonts - display swap for faster text rendering -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@300;400;500;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- AOS - Animate On Scroll -->
+    <!-- AOS - Animate On Scroll (defer non-critical) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Custom Styles -->
@@ -55,7 +64,7 @@
     <!-- HERO -->
     <section class="hero" id="hero">
         <div class="hero-media">
-            <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
+            <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="Website Photos/Boiler Room (2)jpg.jpg">
                 <source src="Horizontal Videos/Website Final - Vault Vid.mp4" type="video/mp4">
             </video>
         </div>
@@ -102,36 +111,28 @@
     <div class="ticker">
         <div class="ticker-track">
             <div class="ticker-content">
-                <span class="ticker-item">San Marcos' Best Bar</span>
-                <span class="ticker-item">Bar Bites All Day</span>
-                <span class="ticker-item">Live Music & Events</span>
-                <span class="ticker-item">Bottle Service</span>
-                <span class="ticker-item">Food Menu</span>
-                <span class="ticker-item">Private Events</span>
-                <span class="ticker-item">18+ to Enter</span>
-                <span class="ticker-item">21+ to Drink</span>
+                <span class="ticker-item">Wings & Cocktails</span>
+                <span class="ticker-item">Open Late</span>
+                <span class="ticker-item">Downtown San Marcos</span>
+                <span class="ticker-item">Food Til Close</span>
+                <span class="ticker-item">Two Vibes One Spot</span>
+                <span class="ticker-item">Bar Bites Done Right</span>
+                <span class="ticker-item">Live Music Weekly</span>
+                <span class="ticker-item">Bottle Service Available</span>
                 <span class="ticker-item">On The Square</span>
-                <span class="ticker-item">Sake Bar & Bistro</span>
-                <span class="ticker-item">The Vault Experience</span>
-                <span class="ticker-item">Late Night Eats</span>
-                <span class="ticker-item">San Marcos TX</span>
-                <span class="ticker-item">Two Concepts One Venue</span>
+                <span class="ticker-item">Late Night Menu</span>
             </div>
             <div class="ticker-content">
-                <span class="ticker-item">San Marcos' Best Bar</span>
-                <span class="ticker-item">Bar Bites All Day</span>
-                <span class="ticker-item">Live Music & Events</span>
-                <span class="ticker-item">Bottle Service</span>
-                <span class="ticker-item">Food Menu</span>
-                <span class="ticker-item">Private Events</span>
-                <span class="ticker-item">18+ to Enter</span>
-                <span class="ticker-item">21+ to Drink</span>
+                <span class="ticker-item">Wings & Cocktails</span>
+                <span class="ticker-item">Open Late</span>
+                <span class="ticker-item">Downtown San Marcos</span>
+                <span class="ticker-item">Food Til Close</span>
+                <span class="ticker-item">Two Vibes One Spot</span>
+                <span class="ticker-item">Bar Bites Done Right</span>
+                <span class="ticker-item">Live Music Weekly</span>
+                <span class="ticker-item">Bottle Service Available</span>
                 <span class="ticker-item">On The Square</span>
-                <span class="ticker-item">Sake Bar & Bistro</span>
-                <span class="ticker-item">The Vault Experience</span>
-                <span class="ticker-item">Late Night Eats</span>
-                <span class="ticker-item">San Marcos TX</span>
-                <span class="ticker-item">Two Concepts One Venue</span>
+                <span class="ticker-item">Late Night Menu</span>
             </div>
         </div>
     </div>
@@ -210,20 +211,20 @@
 
             <div class="menu-grid">
                 <div class="menu-image-large" data-aos="fade-right" data-aos-duration="1000">
-                    <img src="Food Content /Food Menu.png" alt="Our Menu">
+                    <img loading="lazy" src="Food Content /Food Menu.png" alt="Our Menu">
                 </div>
                 <div class="menu-gallery" data-aos="fade-left" data-aos-duration="1000">
                     <div class="menu-image">
-                        <img src="Food Content /Wing Basketjpg.jpg" alt="Wings">
+                        <img loading="lazy" src="Food Content /Wing Basketjpg.jpg" alt="Wings">
                     </div>
                     <div class="menu-image">
-                        <img src="Food Content /Food w Tower.jpg" alt="Food & Drinks">
+                        <img loading="lazy" src="Food Content /Food w Tower.jpg" alt="Food & Drinks">
                     </div>
                     <div class="menu-image">
-                        <img src="Food Content /Bottle Girl w Food.jpg" alt="Bottle Service with Food">
+                        <img loading="lazy" src="Food Content /Bottle Girl w Food.jpg" alt="Bottle Service with Food">
                     </div>
                     <div class="menu-image">
-                        <img src="Food Content /Girls & Food.jpg" alt="Good Times">
+                        <img loading="lazy" src="Food Content /Girls & Food.jpg" alt="Good Times">
                     </div>
                 </div>
             </div>
@@ -246,70 +247,70 @@
             <div class="polaroid-gallery" data-aos="fade-up" data-aos-delay="100">
                 <div class="polaroid-track">
                     <div class="polaroid-item">
-                        <img src="Website Photos/Boiler Room (2)jpg.jpg" alt="Boiler Room">
+                        <img loading="lazy" src="Website Photos/Boiler Room (2)jpg.jpg" alt="Boiler Room">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Bottle Service (confetti).jpg" alt="Bottle Service">
+                        <img loading="lazy" src="Website Photos/Bottle Service (confetti).jpg" alt="Bottle Service">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Crowd Photo.jpg" alt="Crowd">
+                        <img loading="lazy" src="Website Photos/Crowd Photo.jpg" alt="Crowd">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Full Crowd.jpg" alt="Full Crowd">
+                        <img loading="lazy" src="Website Photos/Full Crowd.jpg" alt="Full Crowd">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Sake Bartender.jpg" alt="Sake Bartender">
+                        <img loading="lazy" src="Website Photos/Sake Bartender.jpg" alt="Sake Bartender">
                     </div>
                     <!-- Duplicate for seamless loop -->
                     <div class="polaroid-item">
-                        <img src="Website Photos/Boiler Room (2)jpg.jpg" alt="Boiler Room">
+                        <img loading="lazy" src="Website Photos/Boiler Room (2)jpg.jpg" alt="Boiler Room">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Bottle Service (confetti).jpg" alt="Bottle Service">
+                        <img loading="lazy" src="Website Photos/Bottle Service (confetti).jpg" alt="Bottle Service">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Crowd Photo.jpg" alt="Crowd">
+                        <img loading="lazy" src="Website Photos/Crowd Photo.jpg" alt="Crowd">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Full Crowd.jpg" alt="Full Crowd">
+                        <img loading="lazy" src="Website Photos/Full Crowd.jpg" alt="Full Crowd">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Sake Bartender.jpg" alt="Sake Bartender">
+                        <img loading="lazy" src="Website Photos/Sake Bartender.jpg" alt="Sake Bartender">
                     </div>
                 </div>
 
                 <!-- Row 2 - Reverse Direction -->
                 <div class="polaroid-track polaroid-track-reverse">
                     <div class="polaroid-item">
-                        <img src="Website Photos/Nic on Vault.jpg" alt="DJ Performance">
+                        <img loading="lazy" src="Website Photos/Nic on Vault.jpg" alt="DJ Performance">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Boiler Room Crowd.jpg" alt="Boiler Room Crowd">
+                        <img loading="lazy" src="Website Photos/Boiler Room Crowd.jpg" alt="Boiler Room Crowd">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Bottle service (2).jpg" alt="Bottle Service">
+                        <img loading="lazy" src="Website Photos/Bottle service (2).jpg" alt="Bottle Service">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Crowd Photo (2).jpg" alt="Crowd">
+                        <img loading="lazy" src="Website Photos/Crowd Photo (2).jpg" alt="Crowd">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Sake Bartender (2).jpg" alt="Bartender">
+                        <img loading="lazy" src="Website Photos/Sake Bartender (2).jpg" alt="Bartender">
                     </div>
                     <!-- Duplicate for seamless loop -->
                     <div class="polaroid-item">
-                        <img src="Website Photos/Nic on Vault.jpg" alt="DJ Performance">
+                        <img loading="lazy" src="Website Photos/Nic on Vault.jpg" alt="DJ Performance">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Boiler Room Crowd.jpg" alt="Boiler Room Crowd">
+                        <img loading="lazy" src="Website Photos/Boiler Room Crowd.jpg" alt="Boiler Room Crowd">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Bottle service (2).jpg" alt="Bottle Service">
+                        <img loading="lazy" src="Website Photos/Bottle service (2).jpg" alt="Bottle Service">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Crowd Photo (2).jpg" alt="Crowd">
+                        <img loading="lazy" src="Website Photos/Crowd Photo (2).jpg" alt="Crowd">
                     </div>
                     <div class="polaroid-item">
-                        <img src="Website Photos/Sake Bartender (2).jpg" alt="Bartender">
+                        <img loading="lazy" src="Website Photos/Sake Bartender (2).jpg" alt="Bartender">
                     </div>
                 </div>
             </div>
@@ -326,53 +327,53 @@
                 <div class="marquee-track">
                     <!-- First set of flyers -->
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/Christmas Party Flyer.png" alt="Christmas Party">
+                        <img loading="lazy" src="Website Event Flyers/Christmas Party Flyer.png" alt="Christmas Party">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/Greek Wars.png" alt="Greek Wars">
+                        <img loading="lazy" src="Website Event Flyers/Greek Wars.png" alt="Greek Wars">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/Halloween Flyer.png" alt="Halloween">
+                        <img loading="lazy" src="Website Event Flyers/Halloween Flyer.png" alt="Halloween">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/Wurstfest Afterparty.png" alt="Wurstfest Afterparty">
+                        <img loading="lazy" src="Website Event Flyers/Wurstfest Afterparty.png" alt="Wurstfest Afterparty">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/OPen Deck Flyer.png" alt="Open Deck Night">
+                        <img loading="lazy" src="Website Event Flyers/OPen Deck Flyer.png" alt="Open Deck Night">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/power hour.png" alt="Power Hour">
+                        <img loading="lazy" src="Website Event Flyers/power hour.png" alt="Power Hour">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/Tequila Tuesday.png" alt="Tequila Tuesday">
+                        <img loading="lazy" src="Website Event Flyers/Tequila Tuesday.png" alt="Tequila Tuesday">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/Wednesday Specials.png" alt="Wednesday Specials">
+                        <img loading="lazy" src="Website Event Flyers/Wednesday Specials.png" alt="Wednesday Specials">
                     </div>
                     <!-- Duplicate set for seamless loop -->
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/Christmas Party Flyer.png" alt="Christmas Party">
+                        <img loading="lazy" src="Website Event Flyers/Christmas Party Flyer.png" alt="Christmas Party">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/Greek Wars.png" alt="Greek Wars">
+                        <img loading="lazy" src="Website Event Flyers/Greek Wars.png" alt="Greek Wars">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/Halloween Flyer.png" alt="Halloween">
+                        <img loading="lazy" src="Website Event Flyers/Halloween Flyer.png" alt="Halloween">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/Wurstfest Afterparty.png" alt="Wurstfest Afterparty">
+                        <img loading="lazy" src="Website Event Flyers/Wurstfest Afterparty.png" alt="Wurstfest Afterparty">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/OPen Deck Flyer.png" alt="Open Deck Night">
+                        <img loading="lazy" src="Website Event Flyers/OPen Deck Flyer.png" alt="Open Deck Night">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/power hour.png" alt="Power Hour">
+                        <img loading="lazy" src="Website Event Flyers/power hour.png" alt="Power Hour">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/Tequila Tuesday.png" alt="Tequila Tuesday">
+                        <img loading="lazy" src="Website Event Flyers/Tequila Tuesday.png" alt="Tequila Tuesday">
                     </div>
                     <div class="flyer-card">
-                        <img src="Website Event Flyers/Wednesday Specials.png" alt="Wednesday Specials">
+                        <img loading="lazy" src="Website Event Flyers/Wednesday Specials.png" alt="Wednesday Specials">
                     </div>
                 </div>
             </div>
