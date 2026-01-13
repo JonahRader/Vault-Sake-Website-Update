@@ -546,6 +546,136 @@ img.logo-vault,
 }
 
 /* ============================================
+   THE MENU SECTION
+   ============================================ */
+.menu {
+    padding: var(--section-padding) 0;
+    background: var(--color-bg-lighter);
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.menu-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5rem);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.menu-header h2 span {
+    color: var(--color-primary);
+}
+
+.menu-header p {
+    font-family: var(--font-script);
+    font-size: 2rem;
+    color: var(--color-text-secondary);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.menu-image-large {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.menu-image-large img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.menu-image-large:hover img {
+    transform: scale(1.02);
+}
+
+.menu-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.menu-image {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.menu-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(227, 28, 35, 0.3);
+}
+
+.menu-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.menu-image:hover img {
+    transform: scale(1.05);
+}
+
+.menu-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.menu-cta p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+@media (max-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .menu-image-large {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .menu-image img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-image img {
+        height: 200px;
+    }
+}
+
+/* ============================================
    THE VIBE SECTION (Gallery + Past Events)
    ============================================ */
 .vibe {
