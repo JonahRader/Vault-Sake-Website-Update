@@ -99,8 +99,10 @@ img, video {
     width: auto;
 }
 
-.logo-vault {
-    filter: brightness(0) invert(1);
+img.logo-vault,
+.nav-logo img.logo-vault,
+.footer-brand-logo.logo-vault {
+    filter: brightness(0) invert(1) !important;
 }
 
 .nav-links {
